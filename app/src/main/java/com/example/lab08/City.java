@@ -1,5 +1,5 @@
 package com.example.lab08;
-
+// Added comment for CI verification
 public class City {
     private String city;
     private String province;
