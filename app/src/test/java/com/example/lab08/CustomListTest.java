@@ -28,4 +28,19 @@ public class CustomListTest {
         list.addCity(calgary);
         assertFalse(list.hasCity(edmonton));
     }
+
+    @Test
+    public void testDeleteCityRemovesCityFromList() {
+        list.addCity(calgary);
+        list.deleteCity(calgary);
+        assertFalse(list.hasCity(calgary));
+    }
+
+    @Test
+    public void testDeleteCityDoesNotAffectOtherCities() {
+        list.addCity(calgary);
+        list.addCity(edmonton);
+        list.deleteCity(calgary);
+        assertTrue(list.hasCity(edmonton));
+    }
 }
