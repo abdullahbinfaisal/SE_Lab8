@@ -15,6 +15,10 @@ public class CustomList {
     }
 
     public boolean hasCity(City city) {
-    return cities.contains(city);
+        return cities.contains(city);
     }    
+
+    public void deleteCity(City city) {
+        cities.remove(city);
+    }
 }
